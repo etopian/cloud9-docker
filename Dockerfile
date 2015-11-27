@@ -41,6 +41,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 EXPOSE 80
 EXPOSE 3000
 
+ADD drush.sh /
+
 # ------------------------------------------------------------------------------
 # Start supervisor, define default command.
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
