@@ -43,7 +43,7 @@ EXPOSE 3000
 
 ADD drush.sh /
 
-RUN /drush.sh
+RUN chmod +x /drush.sh && /drush.sh
 
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/bin/wp-cli
 
