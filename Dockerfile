@@ -43,6 +43,8 @@ EXPOSE 3000
 
 ADD drush.sh /
 
+RUN /drush.sh
+
 # ------------------------------------------------------------------------------
 # Start supervisor, define default command.
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
